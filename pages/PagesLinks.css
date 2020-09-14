@@ -1,0 +1,41 @@
+.navbar {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 25px;
+    margin-top: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    list-style: none;
+}
+
+.PageLink {
+    background-color: #008966;
+    border-color: #007c5d;
+   
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.25;
+    font-size:18px;
+    color: #fff;
+    border: 0 solid transparent;
+    text-decoration: none;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.PageLink:first-child {
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+}
+.PageLink:last-child {
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.ActivePageLink {
+    font-weight: bold;
+    background-color: #00bc8c;
+}
