@@ -1,0 +1,30 @@
+.create-task-page {
+    display: flex;
+    min-height: 200px;
+    background-color: linen;
+    border-radius: 5px;
+    padding:  10px 10px;
+
+}
+
+.create-task-page-block {
+    flex-grow: 5;
+    margin-right: 10px;
+    min-height: 200px;
+    background-color: lightyellow;
+    border-radius: 5px;
+    padding:  10px 10px;
+
+}
+.create-task-page_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.create-task-page .aside-right {
+    flex-grow: 1;
+    background-color: lightyellow;
+    border-radius: 5px;
+    padding:  10px 10px;
+}

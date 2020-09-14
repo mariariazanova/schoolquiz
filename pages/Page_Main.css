@@ -1,0 +1,90 @@
+div.main_mainpage {
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+
+div.main_mainpage_asideleft {
+    flex: 1;
+    background-color: BurlyWood;
+    margin-right: 20px;
+    border-radius: 5px;
+    padding: 10px;
+    
+}
+div.main_mainpage_center {
+    flex: 3;
+    background-color: lightyellow;
+    margin-right: 20px;
+    border-radius: 5px;
+    padding:  10px 10px;
+    text-align: justify;
+    text-indent: 25px;
+
+}
+
+div.main_mainpage_asideright {
+    flex: 1;
+    background-color: BurlyWood;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+div.main_mainpage h3 {
+    margin: 0px;
+    text-align: center;
+    color: white;
+    font-weight: normal;
+}
+div.main_mainpage p{
+    margin: 0px 20px;
+}
+div.main_add > div {
+    text-align: center;
+}
+div.main_mainpage_button {
+    margin: 20px auto;
+    text-align: center;
+}
+
+div.main input[type="button"] {
+    margin-left: auto;
+    margin-right: auto;
+    color: white;
+    background-color: #008966;
+    border: #008966;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 15px 30px;
+   
+}
+
+div.main input[type="button"]:hover {
+    background-color: #00bc8c;
+    border: #00bc8c;
+}
+
+div.main_add {
+    width: 70%;
+    margin: 0 auto;
+    background-color: lightyellow;
+    border-radius: 5px;
+    padding:  10px 10px;
+    text-align: justify;
+    text-indent: 25px;
+    opacity: 1;
+    transition: opacity 2s;
+}
+
+div.main_add_no {
+    width: 70%;
+    margin: 0 auto;
+    background-color: lightyellow;
+    border-radius: 5px;
+    padding:  10px 10px;
+    text-align: justify;
+    text-indent: 25px;
+    opacity: 0;
+    transition: opacity 1s;
+}

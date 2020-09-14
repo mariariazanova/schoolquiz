@@ -1,0 +1,17 @@
+.subjectspage {
+    min-height: 200px;
+    background-color: lightyellow;
+    border-radius: 5px;
+    padding:  10px 10px;
+
+}
+.subjectspage_inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+
+}
+.subjectspage_inner img {
+    border-radius: 5px;
+
+}
