@@ -10,9 +10,16 @@ var firebaseConfig = {
     appId: "1:742652265241:web:52f37013016fbe030dbb88",
     measurementId: "G-9Z0PNWHHBB"
 };
+
+const TASKS = 'tasks';
+const REQUESTS = 'requests';
+
 firebase.initializeApp(firebaseConfig);
 firebase.analytics();
 
 export const auth = firebase.auth();
+export const database = firebase.database();
+export const tasks = database.ref().child(TASKS);
+export const requests = database.ref().child(REQUESTS);
 
 export default firebase;

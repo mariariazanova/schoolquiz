@@ -575,8 +575,9 @@ div.main_add_no {
 .subjectspage_inner img {
     border-radius: 5px;
 
-}.quiz-form {
+}#quiz-form {
     width: 100%;
+    padding: 10px;
 }
 .quiz-details {
     display: flex;
@@ -594,7 +595,7 @@ div.main_add_no {
 .quiz-details .inputs-list {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 100%;
 }
 
 .quiz-details .inputs-list input, .quiz-details .inputs-list select {
@@ -604,6 +605,27 @@ div.main_add_no {
 }.quiz-question {
     display: flex;
     flex-direction: column;
+    background-color:#98FB98;
+}
+select[name="question-type"] {
+    width: 200px;
+}
+.check-answers {
+    display: flex;
+    justify-content: space-between;
+}
+.check-answers input {
+    margin-bottom: 6px;
+}
+.check-answers input[type="checkbox"] {
+    margin-top: 0px;
+    width: 20px;
+    height: 20px;
+}
+
+
+input[name="answers"] {
+    width: 95%;
 }.create-task-page {
     display: flex;
     min-height: 200px;
