@@ -1,5 +1,6 @@
-.quiz-form {
+#quiz-form {
     width: 100%;
+    padding: 10px;
 }
 .quiz-details {
     display: flex;
@@ -17,7 +18,7 @@
 .quiz-details .inputs-list {
     display: flex;
     flex-direction: column;
-    width: 500px;
+    width: 100%;
 }
 
 .quiz-details .inputs-list input, .quiz-details .inputs-list select {

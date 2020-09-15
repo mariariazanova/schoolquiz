@@ -88,7 +88,7 @@ class Header extends React.Component {
                 <textarea rows="10" cols="45" name="text" className="form-control"
                   id="password" value={this.props.passwordSignUp}
                   onChange={this.props.onPasswordSignUpChangeAction}
-                  placeholder="abc123" />
+                  placeholder="Мне очень понравилось ваше приложение!" />
               </div>
             <button type="submit" className="btn-submit">Отправить</button>    
             </form>
