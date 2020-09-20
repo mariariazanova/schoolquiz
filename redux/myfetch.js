@@ -9,6 +9,7 @@ import { SIGNUP_SUCCESS,
     RESET_ERROR  } from "./actionTypesAC";
 
 import firebase from "../firebase";
+import { auth } from '../firebase';
 
 // Signing up with Firebase
 export const signup = (email, password) => async dispatch => {
