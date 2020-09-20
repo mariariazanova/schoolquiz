@@ -1,0 +1,92 @@
+.quiz {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.quiz .header {
+    display: flex;
+    justify-content: space-between;
+}
+
+.quiz  .logo_img {
+    width: 100px;
+
+
+}
+
+.quiz .registration_block {
+    display:flex;
+}
+
+.quiz .registration_block div {
+    padding: 10px;
+    margin: 10px;
+    background-color: orange;
+    border-radius: 5px;
+    color: #fff;
+
+}
+.quiz .registration_block div:last-child {
+    margin-right: 0px;
+}
+
+.quiz .registration_block div:hover {
+    cursor: pointer;
+}    
+
+li.page-item {
+    flex: auto;
+    text-align: center;
+
+}
+
+
+.page-item .page-link{
+    background-color: #008966;
+    border-color: #007c5d;
+    position: relative;
+    display: block;
+    padding: 0.5rem 0.75rem;
+    line-height: 1.25;
+    color: #fff;
+    border: 0 solid transparent;
+    text-decoration: none;
+}
+
+.page-item.active .page-link {
+    background-color: #00bc8c;
+    border-color: #007c5d;
+}
+
+.quiz .main {
+    width: 50%; 
+    margin: 10px 10px 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    background-color: lightgreen;
+}
+
+
+@media (min-width: 1200px) {
+    .quiz {
+    max-width: 1140px;
+    }
+}
+@media (min-width: 992px) and (max-width: 1200px) {
+    .quiz {
+    max-width: 960px;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 992px) {
+    .quiz {
+    max-width: 720px;
+    }
+}
+@media (min-width: 576px) and (max-width: 768px)  {
+    .quiz {
+    max-width: 540px;
+    }
+}
