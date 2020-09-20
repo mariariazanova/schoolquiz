@@ -43,9 +43,12 @@ class Page_Main extends React.PureComponent {
     return (
     <React.Fragment> 
       <div className="main_mainpage">    
-        <div className="main_mainpage_asideleft">
-          <h3>Новости</h3>
-        </div>
+        {/*<div className="main_mainpage_asideleft">
+          <h3>Новости:</h3>
+          <ul>
+            <li>Добавлен тест по англ.языку для 5 класса</li>
+          </ul>
+    </div>*/}
         <div className="main_mainpage_center">
           <p>Здравствуйте, дорогие друзья! Перед вами приложение для обучения и тестирования знаний школьников. У нас есть готовые тесты для школьников 1-11 классов по многим предметам. Кроме того, вы можете создавать свои тесты. Чтобы получить доступ к полному функционалу, зарегистрируйтесь!
           </p>
@@ -63,9 +66,10 @@ class Page_Main extends React.PureComponent {
                    onClick={this.viewMore}/>
           </div>
         </div>
-        <div className="main_mainpage_asideright">
-          <h3>Контакты</h3>
-        </div>
+       {/* <div className="main_mainpage_asideright">
+          <h3>Контакты:</h3>
+          <p>Вы можете связаться с нами посредством формы обратной связи.</p>
+                </div>*/}
       </div>
       <div>{/*
         {

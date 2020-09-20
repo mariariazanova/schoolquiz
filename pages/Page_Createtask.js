@@ -3,15 +3,25 @@ import requireAuth from "../components/hoc/requireAuth";
 import { compose } from "redux";
 import { connect } from "react-redux";
 import { Link } from "react-router-dom";
+
+
 import { signout } from "../redux/myfetch";
 import Form from "../components/Form";
 
 import './Page_Createtask.css';
 
+import firebase from '../firebase';
+import { auth } from "../firebase";
+
+
+
 
 
 const Page_Createtask = ({ signout }) => {
   
+  
+
+
   
     return (
     <React.Fragment> 
@@ -22,7 +32,8 @@ const Page_Createtask = ({ signout }) => {
         </div>
       </div>
       <div className="aside-right">
-        <p>Ваш аккаунт</p>
+      <p>Ваш аккаунт {firebase.auth().currentUser.email}</p>
+
         <button className="btn-switch" onClick={() => signout()}>
         Выйти
       </button>
@@ -35,6 +46,9 @@ const Page_Createtask = ({ signout }) => {
   
 
 };
+
+
+
 
 function mapStateToProps(state) {
   return {

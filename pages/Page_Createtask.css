@@ -24,6 +24,7 @@
 }
 .create-task-page .aside-right {
     flex-grow: 1;
+
     background-color: lightyellow;
     border-radius: 5px;
     padding:  10px 10px;
