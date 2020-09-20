@@ -4,6 +4,7 @@ import { Redirect, Link, BrowserRouter, Route  } from 'react-router-dom'
 import Login from '../pages/Login';
 
 import './Header.css';
+import FormRequest from '../components/FormRequest';
 import img from '../images/logo.png';
 
 
@@ -11,27 +12,14 @@ import img from '../images/logo.png';
 
 class Header extends React.Component {
 
-    static propTypes = {
-        
-    };
-
     state = {
-     
-      showForm: false
+       showForm: false
     }
 
     showRegForm = (EO) => {
-       
-     
-     this.setState ({showForm: true})
-
+       this.setState ({showForm: true})
     } 
-    //render(){
-    // if (this.state.showRegForm) {
-    //   return <Redirect to="/login" />
-    //}
-  
-  
+     
     render() {
     
       const navBarItemsList = this.props.navbar.map((item, index) => (
@@ -51,58 +39,20 @@ class Header extends React.Component {
             <BrowserRouter>
             <div className="registration_block">
               <div className="" onClick={this.showRegForm}>               
-              Зарегистрироваться
+              Форма обратной связи
               </div>
-             
-              <div className="">Войти</div>
             </div> 
             </BrowserRouter>
           </div>
         </div>
         {
         (this.state.showForm)
-        ? <div>
-         
-           <div className="new_form">
-             <h1>Форма обратной связи:</h1>
-            <form onSubmit={this.handleSubmit}>
-              <div className="form-group">
-                <label htmlFor="exampleInputEmail1">Введите свой email:</label>
-                <input type="email" className="form-control"
-                  id="email"
-                  onChange={this.props.onEmailSignUpChangeAction}
-                  aria-describedby="emailHelp"
-                  value={this.props.emailSignUp}
-                  placeholder="aaaa@mail.ru" />
-                
-            </div>
-            <div className="form-group">
-                <label htmlFor="exampleInputPassword1">Введите свое имя:</label>
-                <input type="password" className="form-control"
-                  id="password" value={this.props.passwordSignUp}
-                  onChange={this.props.onPasswordSignUpChangeAction}
-                  placeholder="abc123" />
-              </div>
-              <div className="form-group">
-                <label htmlFor="exampleInputRequire">Что вы хотите нам сказать:</label>
-                <textarea rows="10" cols="45" name="text" className="form-control"
-                  id="password" value={this.props.passwordSignUp}
-                  onChange={this.props.onPasswordSignUpChangeAction}
-                  placeholder="Мне очень понравилось ваше приложение!" />
-              </div>
-            <button type="submit" className="btn-submit">Отправить</button>    
-            </form>
-          </div> 
-          </div> 
-          : null
+        ? <FormRequest />
+        : null
          }
-       
-        
-      </React.Fragment>              
-              
+      </React.Fragment>                  
       );  
-    }
-  
+    } 
   }
   
-  export default Header;
+export default Header;

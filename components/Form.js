@@ -13,6 +13,7 @@ var forms = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11];
 
 class Form extends React.Component {
 
+
     state = {
        title: '',
        subject: '',
@@ -28,6 +29,7 @@ class Form extends React.Component {
        id: 1,
     } 
     
+
     
 
     titleChange = (EO) => {
@@ -54,26 +56,8 @@ class Form extends React.Component {
         });
        
     }
-    /*    
-    setQuestionType = (questiontype)  => {
-       this.setState({questiontype: questiontype});
-       console.log(this.state.questiontype);
-    }
-    setQuestion = (question)  => {
-      this.setState({question: question});
-      console.log(this.state.question);
-    }
-    setAnswers  = (answers)  => {
-       this.setState({answers: answers});
-       console.log(this.state.answers);
-    }
-    setCorrectAnswer = (correctanswer)  => {
-      this.setState({correctanswers: correctanswer});
-      console.log(this.state.correctanswers);
-   }
-  */
-
-   saveQuestion = (questiontype, question, answers, correctanswers) => {
+    
+    saveQuestion = (questiontype, question, answers, correctanswers) => {
       this.setState({questiontype: questiontype, question: question,
                     answers: answers, correctanswers: correctanswers
       });
@@ -90,11 +74,13 @@ class Form extends React.Component {
    } 
 
     handleSubmit = (EO) => {
-   
-        const quizInfoNew = {id: this.state.id, title: this.state.title, 
+        var newPostKey = tasks.push().key;
+        console.log(newPostKey);
+        
+        const quizInfoNew = {id: newPostKey, title: this.state.title, 
                             subject:this.state.subject, 
                             form: this.state.form, questions: this.state.questionsInfo};
-        this.setState({quizInfo: quizInfoNew, id: this.state.id + 1});                   
+        this.setState({quizInfo: quizInfoNew, id: newPostKey});                   
                       
         console.log(JSON.stringify(quizInfoNew));
         const quizInfoReady=JSON.stringify(quizInfoNew);
@@ -107,9 +93,20 @@ class Form extends React.Component {
 
       }
 
+    clean   = (EO) => {
+      this.setState({title: '', subject: '', form: '',
+                    questions: [], question: false,
+                    countquestion: 1,questiontype : '',
+                    answers: [], correctanswers: [],
+                    questionsInfo: [],quizInfo: {},
+                    id: 1
+                  });
+    }  
+
       
     render() {
     
+      
 
         return (
            <React.Fragment>
@@ -149,7 +146,8 @@ class Form extends React.Component {
                   
                   
                
-              <button type="submit">Отправить</button>   
+              <button type="submit">Отправить</button> 
+              <button  type="submit" onClick={this.clean}>Сбросить все поля</button> 
             </form>
            </React.Fragment>
 

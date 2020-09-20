@@ -1,0 +1,24 @@
+form.new-form {
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: center;
+    top: calc(50% - 200px);
+    left: 50%;
+    margin-left: -200px;
+    box-shadow: 500px -500px 0px 1600px rgba(0,0,0,0.5);
+    z-index: 1000;
+
+
+}
+
+form.new-form  .btn-submit {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: white;
+}
