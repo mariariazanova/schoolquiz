@@ -15,7 +15,7 @@ const TASKS = 'tasks';
 const REQUESTS = 'requests';
 
 firebase.initializeApp(firebaseConfig);
-firebase.analytics();
+//firebase.analytics();
 
 export const auth = firebase.auth();
 export const database = firebase.database();

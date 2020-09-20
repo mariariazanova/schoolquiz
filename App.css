@@ -21,7 +21,9 @@ body {
     margin-left: auto;
 }   
     
-    
+.main .login {
+        margin: 0 auto;
+}    
 @media (min-width: 1200px) {
         #container {
         max-width: 1140px;
@@ -38,8 +40,65 @@ body {
         max-width: 720px;
         }
 }
-@media (min-width: 576px) and (max-width: 768px)  {
+@media (max-width: 768px)  {
         #container {
         max-width: 540px;
+        }
+        .create-task-page {
+        flex-direction: column;
+        }
+        div.create-task-page-block {
+        margin-right: 0;        
+        }
+        .create-task-page .aside-right {
+        text-align: center;    
+        }
+        div.main div.main_mainpage {
+                display: block;
+        }
+        div.main_mainpage div.main_mainpage_asideleft, div.main_mainpage  div.main_mainpage_asideright {
+        display: none;
+        }
+        .main_mainpage div.main_mainpage_center {
+        margin-right: 0;
+        }
+        .subjectspage_asideright .subjectspage_asideright_subjects, .subjectspage_asideright .subjectspage_asideright_forms {
+        justify-content: space-around        
+        }
+        .subjectspage div.subjectspage_center {
+        margin-right: 0;
+        }
+        .main div.subjectspage {
+        justify-content: space-around;   
+        }
+}
+
+@media (max-width: 448px)  {
+        .subjectspage {
+             flex-direction: column-reverse;
+          
+        }
+        div.main div.main_mainpage {
+                display: block;
+        }
+        div.main_mainpage div.main_mainpage_asideleft, div.main_mainpage  div.main_mainpage_asideright {
+        display: none;
+        }
+        .main_mainpage div.main_mainpage_center {
+        margin-right: 0;
+        }
+}
+@media (max-width: 380px) {
+        .registration_block {
+                width:50%;
+        }
+        
+        .tasks-table tbody.all-tasks tr.one-task td.cell {
+           padding: 5px 5px;   
+           font-size: 12px;
+        }
+        .tasks-table tbody.all-tasks tr.one-task td.cell a {
+                font-size: 12px;
+
         }
 }

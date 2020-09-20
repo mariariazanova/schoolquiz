@@ -21,7 +21,9 @@ body {
     margin-left: auto;
 }   
     
-    
+.main .login {
+        margin: 0 auto;
+}    
 @media (min-width: 1200px) {
         #container {
         max-width: 1140px;
@@ -38,9 +40,66 @@ body {
         max-width: 720px;
         }
 }
-@media (min-width: 576px) and (max-width: 768px)  {
+@media (max-width: 768px)  {
         #container {
         max-width: 540px;
+        }
+        .create-task-page {
+        flex-direction: column;
+        }
+        div.create-task-page-block {
+        margin-right: 0;        
+        }
+        .create-task-page .aside-right {
+        text-align: center;    
+        }
+        div.main div.main_mainpage {
+                display: block;
+        }
+        div.main_mainpage div.main_mainpage_asideleft, div.main_mainpage  div.main_mainpage_asideright {
+        display: none;
+        }
+        .main_mainpage div.main_mainpage_center {
+        margin-right: 0;
+        }
+        .subjectspage_asideright .subjectspage_asideright_subjects, .subjectspage_asideright .subjectspage_asideright_forms {
+        justify-content: space-around        
+        }
+        .subjectspage div.subjectspage_center {
+        margin-right: 0;
+        }
+        .main div.subjectspage {
+        justify-content: space-around;   
+        }
+}
+
+@media (max-width: 448px)  {
+        .subjectspage {
+             flex-direction: column-reverse;
+          
+        }
+        div.main div.main_mainpage {
+                display: block;
+        }
+        div.main_mainpage div.main_mainpage_asideleft, div.main_mainpage  div.main_mainpage_asideright {
+        display: none;
+        }
+        .main_mainpage div.main_mainpage_center {
+        margin-right: 0;
+        }
+}
+@media (max-width: 380px) {
+        .registration_block {
+                width:50%;
+        }
+        
+        .tasks-table tbody.all-tasks tr.one-task td.cell {
+           padding: 5px 5px;   
+           font-size: 12px;
+        }
+        .tasks-table tbody.all-tasks tr.one-task td.cell a {
+                font-size: 12px;
+
         }
 }
 .navbar_block .navbar {
@@ -384,30 +443,6 @@ li.page-item {
     background-color: lightgreen;
 }
 
-.new_form {
-    width: 400px;
-    height: 400px;
-    background-color: orange;
-    position: absolute;
-    color: white;
-    border-radius: 5px;
-    text-align: center;
-    vertical-align: center;
-    top: calc(50% - 200px);
-    left: 50%;
-    margin-left: -200px;
-    box-shadow: 500px -500px 0px 1600px rgba(0,0,0,0.5);
-    z-index: 1000;
-
-
-}
-
-.new_form  .btn-submit {
-    margin-top: 10px;
-    padding: 10px;
-    border-radius: 5px;
-    border-color: white;
-}
 
 @media (min-width: 1200px) {
     .quiz {
@@ -430,7 +465,30 @@ li.page-item {
     max-width: 540px;
     }
 }
-.navbar {
+form.new-form {
+    width: 400px;
+    height: 400px;
+    background-color: orange;
+    position: absolute;
+    color: white;
+    border-radius: 5px;
+    text-align: center;
+    vertical-align: center;
+    top: calc(50% - 200px);
+    left: 50%;
+    margin-left: -200px;
+    box-shadow: 500px -500px 0px 1600px rgba(0,0,0,0.5);
+    z-index: 1000;
+
+
+}
+
+form.new-form  .btn-submit {
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: white;
+}.navbar {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
@@ -483,12 +541,13 @@ div.main_mainpage_asideleft {
     margin-right: 20px;
     border-radius: 5px;
     padding: 10px;
+    color: white;
     
 }
 div.main_mainpage_center {
     flex: 3;
     background-color: lightyellow;
-    margin-right: 20px;
+   
     border-radius: 5px;
     padding:  10px 10px;
     text-align: justify;
@@ -501,6 +560,10 @@ div.main_mainpage_asideright {
     background-color: BurlyWood;
     border-radius: 5px;
     padding: 10px;
+    color: white;
+}
+div.main_mainpage div.main_mainpage_asideright h3 {
+    margin-bottom: 10px;
 }
 
 div.main_mainpage h3 {
@@ -538,7 +601,7 @@ div.main input[type="button"]:hover {
 }
 
 div.main_add {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     background-color: lightyellow;
     border-radius: 5px;
@@ -550,7 +613,7 @@ div.main_add {
 }
 
 div.main_add_no {
-    width: 70%;
+    width: 100%;
     margin: 0 auto;
     background-color: lightyellow;
     border-radius: 5px;
@@ -559,21 +622,167 @@ div.main_add_no {
     text-indent: 25px;
     opacity: 0;
     transition: opacity 1s;
-}.subjectspage {
+}
+@media (max-width: 768px)  {
+    div.main_mainpage div.main_mainpage_asideleft, div.main_mainpage  div.main_mainpage_asideright {
+        display: none;
+        }
+}    .subjectspage {
+    display: flex;
+  
     min-height: 200px;
     background-color: lightyellow;
     border-radius: 5px;
     padding:  10px 10px;
 
 }
-.subjectspage_inner {
+.subjectspage_center {
+    flex: 0 0 75%;
+    margin-right: 25px;
+}
+.subjectspage_asideright {
+    
+    flex: 0 0 20%;
+    
+    text-align: center;
+}
+
+
+.subjectspage_asideright_subjects {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
+    margin: 10px auto 30px auto;
+}
+.subjectspage_asideright img {
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+}
+.subjectspage_asideright_subjects img:first-child {
+    border: solid 1px red;
+    
+}
+
+.tasks-table {
+    margin: 0 auto;
+    padding: 5px 5px;
+    background-color:lightyellow;
+
+    
+}
+.subjectspage h3 {
+    text-align: center;
+}
+.tasks-table .tasks { 
+    width: 100%; 
+    border-collapse: collapse;
+  padding: 10px;
+  border-radius: 5px;
+  overflow: hidden;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.tasks-table .tasks .cell{
+         
+    text-align: center;
+   
+}
+.tasks-table .tasks .all-tasks {
+    background-color:#C1F7C1;
+}
+.tasks-table .tasks .head {
+    background-color: #90EE90;
+    
+    
+    
+}
+.tasks-table .tasks .head th { 
+      padding: 15px;
+      
+}      
+
+.subjectspage_asideright_forms {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+.subjectspage_asideright_forms div {
+    border-radius: 5px;
+    width: 40px;
+    height: 40px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: BurlyWood;
+    text-align: center;
+    line-height: 35px;
+}
+.subjectspage_asideright_forms div:first-child {
+    border: solid 1px red;
+    
+}.all-tasks .one-task .cell {
+    padding: 10px 15px;
+}.task-page {
+    display: flex;
+    min-height: 200px;
+    background-color: linen;
+    border-radius: 5px;
+    padding:  10px 10px;
+
 
 }
-.subjectspage_inner img {
+.task-page .task-page-block {
+    flex-grow: 5;
+    min-height: 200px;
+    background-color: lightyellow;
     border-radius: 5px;
+    padding:  10px 10px;
+}
+.task-page .task-page_inner .test-header{
+    text-align: center;
+}
+
+.task-page .task-page_inner .question-answers-block {
+    background-color: linen;
+    border: 2px solid orange;
+    border-radius: 5px;
+    margin-bottom: 20px;
+}
+
+.task-page .task-page_inner .question-answers-block_inner {
+    padding: 10px 20px;
+    font-size: 20px;
+
+}
+.task-page .task-page_inner .question-answers-block_inner p {
+    margin: 0 15px 0 0;
+}
+
+.task-page .task-page_inner .answer-block {
+    display: flex;
+}
+.task-page .task-page_inner .answer-block p{
+    margin: 0 15px 0 0;
+}
+
+.question-answers-block_inner .green {
+    color: green;
+    font-weight: bold;
+}
+.question-answers-block_inner .red {
+    color: red;
+    font-weight: bold;
+}.usefulpage {
+    
+    min-height: 200px;
+    background-color: lightyellow;
+    border-radius: 5px;
+    padding:  10px 10px;
+    text-align: center;
 
 }#quiz-form {
     width: 100%;
@@ -652,6 +861,7 @@ input[name="answers"] {
 }
 .create-task-page .aside-right {
     flex-grow: 1;
+
     background-color: lightyellow;
     border-radius: 5px;
     padding:  10px 10px;
