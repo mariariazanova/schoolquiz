@@ -776,6 +776,12 @@ div.main_add_no {
 .question-answers-block_inner .red {
     color: red;
     font-weight: bold;
+}
+.answer-block input{
+    width: 20px;
+    height: 20px;
+    margin-right: 20px;
+   
 }.usefulpage {
     
     min-height: 200px;
