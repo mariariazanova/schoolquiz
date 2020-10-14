@@ -4,19 +4,6 @@ import './Page_Tasks.css';
 import Task from '../components/Task';
 import { auth, database, tasks } from "../firebase";
 
-import  all  from "../images/all.png";
-import  russian  from "../images/russian.png";
-import  russian_lit  from "../images/russian_lit.png";
-import  belarussian  from "../images/belarussian.png";
-import  belarussian_lit  from "../images/belarussian_lit.png";
-import  maths from "../images/maths.png";
-import  english from "../images/english.png";
-import  biology from "../images/biology.png";
-import  geography from "../images/geography.png";
-import  history from "../images/history.png";
-import  physics from "../images/physics.png";
-import  chemistry from "../images/chemistry.png";
-
 class Page_Tasks extends React.PureComponent {
   
   
@@ -219,18 +206,18 @@ class Page_Tasks extends React.PureComponent {
         <h3>Выбрать тесты:</h3>
          
           <div className="subjectspage_asideright_subjects">
-          <img src={all} alt="все предметы" title="все предметы" onClick = {this.setAllSubjects} />
-          <img src={russian} alt="русский язык" title="русский язык" onClick = {this.setRussian}/>
-          <img src={russian_lit} alt="русская литература" title="русская литература" onClick = {this.setRussianLit}/>
-          <img src={belarussian} alt="белорусский язык" title="белорусский язык" onClick = {this.setBelRussian}/>
-          <img src={belarussian_lit} alt="белорусская литература" title="белорусская литература" onClick = {this.setBelRussianLit}/>
-          <img src={maths} alt="математика" title="математика" onClick = {this.setMaths}/>
-          <img src={english} alt="английский язык" title="английский язык" onClick = {this.setEnglish}/>
-          <img src={biology} alt="биология" title="биология" onClick = {this.setBiology}/>
-          <img src={geography} alt="география" title="география" onClick = {this.setGeography}/>
-          <img src={history} alt="история" title="история" onClick = {this.setHistory}/>
-          <img src={physics} alt="физика" title="физика" onClick = {this.setPhysics}/>
-          <img src={chemistry} alt="химия" title="химия"  onClick = {this.setChemistry}/>
+          <img src='../images/all.png' alt="все предметы" title="все предметы" onClick = {this.setAllSubjects} />
+          <img src='../images/russian.png' alt="русский язык" title="русский язык" onClick = {this.setRussian}/>
+          <img src='../images/russian_lit.png' alt="русская литература" title="русская литература" onClick = {this.setRussianLit}/>
+          <img src='../images/belarussian.png' alt="белорусский язык" title="белорусский язык" onClick = {this.setBelRussian}/>
+          <img src='../images/belarussian_lit.png' alt="белорусская литература" title="белорусская литература" onClick = {this.setBelRussianLit}/>
+          <img src='../images/maths.png' alt="математика" title="математика" onClick = {this.setMaths}/>
+          <img src='../images/english.png' alt="английский язык" title="английский язык" onClick = {this.setEnglish}/>
+          <img src='../images/biology.png' alt="биология" title="биология" onClick = {this.setBiology}/>
+          <img src='../images/geography.png' alt="география" title="география" onClick = {this.setGeography}/>
+          <img src='../images/history.png' alt="история" title="история" onClick = {this.setHistory}/>
+          <img src='../images/physics.png' alt="физика" title="физика" onClick = {this.setPhysics}/>
+          <img src='../images/chemistry.png' alt="химия" title="химия"  onClick = {this.setChemistry}/>
           </div>
           <div className="subjectspage_asideright_forms">
             <div title="все классы" onClick = {this.setAllForms}>1-11</div>
