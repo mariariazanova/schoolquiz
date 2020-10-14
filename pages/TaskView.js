@@ -4,21 +4,16 @@ import PropTypes from 'prop-types';
 
 import './TaskView.css';
 
-//import { auth, database, tasks } from "../firebase";
 import { NavLink } from 'react-router-dom';
 
 
-var errors=[];
+var myErrors=[];
 
 class TaskView extends React.PureComponent {
     
     state = {
         countTrueAnswers: 0,
-        //checked: [],
-        //isChecked: false,
-        //items: [false, false, false, false],
         indexQ: 0,
-        //checkedItems: new Map(),
         checked1: false,
         checked2: false,
         checked3: false,
@@ -50,59 +45,10 @@ class TaskView extends React.PureComponent {
           })
       } 
 
-
-
-
-    /*   onToggle(index, e){
-          let newItems = this.state.items.slice();
-          newItems[index].checked = !newItems[index].checked
-          this.setState({ items: newItems })
-          console.log(this.state.items)
-      }
-
-    */
-
-    //  onToggle(index, e){
-    //    let newItems = this.state.items.slice();
-    //    newItems[index].checked = !newItems[index].checked;
-    //    this.setState({ items: newItems });
-    //    console.log(this.state.items)
-    //  }/*
-
-  /*
-    toggle = (e) => {
-      const item = e.target.name;
-      const isChecked = e.target.checked;
-      this.setState(prevState => ({ checkedItems: prevState.checkedItems.set(item, isChecked) }));
-      console.log(this.state.checkedItems);
-      let array = Array.from(this.state.checkedItems).map(([name, value]) => ({ name, value }));
-      console.log(array);
-      this.setState ({items: array});
-    }
-
-
-    toggle = (e, i) => {
-        this.setState({ isChecked: e.target.checked});
-        let newItems = this.state.items.slice();
-        let nI = newItems.findIndex(x => x.index === i);
-        newItems[nI] = this.state.isChecked;
-        
-        this.setState({ items: newItems});
-        console.log(newItems);
-      
-    }
- 
-*/
-
-
     newQuestion  = (EO) => {
       const answersNew = this.state.answers.concat(this.state.checked1, this.state.checked2, this.state.checked3, this.state.checked4);
-      //var mykey = this.state.indexQ;
-      //var answersHash = { mykey : answersNew};
-      //console.log(answersHash);
       this.setState({answers: answersNew});
       console.log(answersNew);
-      //this.setState({answers: answersHash});
       console.log(this.props.info.questions[this.state.indexQ].correctanswers);
 
       const cor_an= this.props.info.questions[this.state.indexQ].correctanswers;
@@ -113,15 +59,13 @@ class TaskView extends React.PureComponent {
       let u = this.state.isChecked; //находим № индекса данного человеком ответа
       let er_an_real = this.props.info.questions[this.state.indexQ].answers[u];//находим данный человеком ответ в массиве ответов
       console.log(u);
-      //let y = this.props.info.questions[this.state.indexQ].answers.findIndex(x => x === true);
-      //console.log(y);
-      //let er_an_real=this.props.info.questions[this.state.indexQ].answers[y];
-      //console.log(er_an_real);
-      if(u  ==!z ){
-        errors.push({q: this.props.info.questions[this.state.indexQ].question, ca:cor_an_real, ea:er_an_real});
-        this.setState({errors: errors});
-      } else {
+      if(u ==z ){
         this.setState({countTrueAnswers: this.state.countTrueAnswers+1});
+        
+      } else {
+        console.log("+");
+        myErrors.push({q: this.props.info.questions[this.state.indexQ].question, ca:cor_an_real, ea:er_an_real});
+        this.setState({errors: myErrors});
       }
      
     console.log(this.state.errors);
@@ -138,41 +82,7 @@ class TaskView extends React.PureComponent {
     }
 
   }  
-/*
-
-      for(var i=0;i<cor_an.length;i++){
-        if(answersNew[i]  ==!cor_an[i] ){
-
-          let z = cor_an.findIndex(x => x === true);
-           
-          var cor_an_real=this.props.info.questions[this.state.indexQ].answers[z];
-          var er_an_real=this.props.info.questions[this.state.indexQ].answers[i];
-          console.log("cor_an_real=" + cor_an_real);
-          console.log("er_an_real=" + er_an_real);
-          if (cor_an_real ==! er_an_real) {
-          errors.push({q: this.props.info.questions[this.state.indexQ].question, ca:cor_an_real, ea:er_an_real});
-          //errors.push({q: this.props.info.questions[this.state.indexQ].question, ca:this.props.info.questions[this.state.indexQ].correctanswers});
-          this.setState({errors: errors});
-          }
-        } else {
-        this.setState({countTrueAnswers: this.state.countTrueAnswers+1});
-      }
-    }
-    console.log(this.state.errors);
-    this.setState({indexQ: this.state.indexQ+1,
-      checked1: false,
-      checked2: false,
-      checked3: false,
-      checked4: false,
-      isChecked: 0,
-      answers: []
     
-    });
-  }  */
-        
-        
-
-  
 
     render() {
     
@@ -295,4 +205,4 @@ class TaskView extends React.PureComponent {
     } 
 }
 
-export default TaskView;   
+export default TaskView; 
